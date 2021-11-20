@@ -8,8 +8,7 @@ class BoxLayoutLab(BoxLayout):
     def on_toggle_button_state(self, toggle):
         if toggle.state == "down":
             toggle.text = "Decipher"
-        else:
-            toggle.text = "Encrypt"
+
 
     def dodo(self, key, input, output, toggle):
         if toggle.text == "Encrypt":
@@ -74,6 +73,5 @@ class BoxLayoutLab(BoxLayout):
 
 class CRApp(App):
     pass
-
 
 CRApp().run()
