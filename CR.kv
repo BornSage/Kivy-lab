@@ -1,0 +1,51 @@
+BoxLayoutLab:
+
+<BoxLayoutLab>:
+    orientation: "vertical"
+    GridLayout:
+        rows: 3
+        cols: 3
+        size_hint: 1, None
+        height: "200dp"
+        #orientation: "horizontal"
+        Label:
+            text: "Key word"
+            size_hint: 1, None
+            height: "40dp"
+        Label:
+            text: "Input"
+            size_hint: 1, None
+            height: "50dp"
+        Label:
+            text: "Output"
+            size_hint: 1, None
+            height: "50dp"
+        TextInput:
+            size_hint: 1, 1
+            id: key
+            text: ""
+        TextInput:
+            id: input
+            text: ""
+            size_hint: 1, 1
+        TextInput:
+            id: output
+            text: ""
+            size_hint: 1, 1
+
+
+    BoxLayout:
+        size_hint: 1, 1
+        orientation: "horizontal"
+        Button:
+            text: "GO!"
+            on_press: root.dodo(key,input,output,toggle_switch)
+            size_hint: 1, 1
+        ToggleButton:
+            id: toggle_switch
+            text: "Encrypt"
+            on_state: root.on_toggle_button_state(self)
+            size_hint: 1, 1
+    Label:
+        size_hint: 1, None
+        height: "110dp"
