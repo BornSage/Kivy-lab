@@ -43,8 +43,8 @@ BoxLayoutLab:
             size_hint: 1, 1
         ToggleButton:
             id: toggle_switch
-            text: "Encrypt"
-            on_state: root.on_toggle_button_state(self)
+            text: "Decipher" if toggle_switch.state == "down" else "Encrypt"
+            #on_state: root.on_toggle_button_state(self)
             size_hint: 1, 1
     Label:
         size_hint: 1, None
