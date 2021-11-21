@@ -5,25 +5,19 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.textinput import TextInput
 
 class BoxLayoutLab(BoxLayout):
-    '''
-    def on_toggle_button_state(self, toggle):
-        if toggle.state == "down":
-            toggle.text = "Decipher"
-        else:
-            toggle.text = "Encrypt"
-    '''
-    def dodo(self, key, input, output, toggle):
+
+    def dodo(self, key, Input, output, toggle):
         if toggle.text == "Encrypt":
-            self.encrypt(key.text.upper(), input.text.upper(), output)
+            self.encrypt(key.text.upper(), Input.text.upper(), output)
 
         else:
-            self.decipher(key.text.upper(), input.text.upper(), output)
+            self.decipher(key.text.upper(), Input.text.upper(), output)
 
 
     def decipher(self, enc_key, enc_input, enc_output):
         deciphered = ""
-        word = enc_input  # enc_input.text.upper()
-        key = enc_key  # enc_key.text.upper()
+        word = enc_input
+        key = enc_key
 
         word = word.replace(" ", "")
 
@@ -49,8 +43,8 @@ class BoxLayoutLab(BoxLayout):
 
     def encrypt(self, enc_key, enc_input, enc_output):
         encrypted = ""
-        word = enc_input#enc_input.text.upper()
-        key = enc_key#enc_key.text.upper()
+        word = enc_input
+        key = enc_key
 
         word = word.replace(" ", "")
 
