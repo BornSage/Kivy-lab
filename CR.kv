@@ -39,13 +39,19 @@ BoxLayoutLab:
         orientation: "horizontal"
         Button:
             text: "GO!"
-            on_press: root.dodo(key,input,output,toggle_switch)
+            on_press: root.dodo(key,input,output,toggle_switch,table_switch,info_label)
             size_hint: 1, 1
         ToggleButton:
             id: toggle_switch
             text: "Decipher" if toggle_switch.state == "down" else "Encrypt"
             #on_state: root.on_toggle_button_state(self)
             size_hint: 1, 1
+        ToggleButton:
+            id: table_switch
+            text: "Formula" if table_switch.state == "down" else "Table"
+            #on_state: root.on_toggle_button_state(self)
+            size_hint: 1, 1
     Label:
         size_hint: 1, None
         height: "110dp"
+        id: info_label
